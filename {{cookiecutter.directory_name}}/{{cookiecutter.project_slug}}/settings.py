@@ -2,11 +2,11 @@ import os
 from typing import Optional
 
 import pydantic
-
+import pydantic_settings
 ENV_FILE = os.getenv("ENV_FILE", ".env")
 
 
-class BaseSettings(pydantic.BaseSettings):
+class BaseSettings(pydantic_settings.BaseSettings):
     """Base class for loading settings.
     The setting variables are loaded from environment settings first, then from the defined env_file.
 
